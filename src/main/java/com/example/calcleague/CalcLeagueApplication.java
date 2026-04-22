@@ -1,13 +1,18 @@
 package com.example.calcleague;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.example.calcleague.gui.MainWindow;
+import javax.swing.SwingUtilities;
 
-@SpringBootApplication
+/**
+ * Application entry point.
+ */
 public class CalcLeagueApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CalcLeagueApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            GameContext context = new GameContext();
+            MainWindow window = new MainWindow(context);
+            window.setVisible(true);
+        });
+    }
 }

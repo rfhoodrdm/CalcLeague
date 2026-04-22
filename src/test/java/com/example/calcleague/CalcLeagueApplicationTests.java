@@ -1,13 +1,17 @@
 package com.example.calcleague;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@SpringBootTest
+import org.junit.jupiter.api.Test;
+
 class CalcLeagueApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+    @Test
+    void contextInitializesServices() {
+        GameContext context = new GameContext();
+        assertNotNull(context.getQuestionGenerator());
+        assertNotNull(context.getScoreCalculationService());
+        assertNotNull(context.getHighScoreService());
+        assertNotNull(context.getHistoryService());
+    }
 }
