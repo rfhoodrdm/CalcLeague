@@ -162,30 +162,33 @@ public class ExercisePanel extends JPanel {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10);
 
-        gbc.gridx = 0;
+        gbc.gridx = 1;
         gbc.gridy = 0;
-        gbc.gridwidth = 2;
+        gbc.gridwidth = 1;
         gbc.anchor = GridBagConstraints.CENTER;
-        divisionDividendLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        divisionDividendLabel.setFont(divisionDividendLabel.getFont().deriveFont(Font.BOLD, 36f));
-        panel.add(divisionDividendLabel, gbc);
+        divisionAnswerField.setHorizontalAlignment(SwingConstants.RIGHT);
+        panel.add(divisionAnswerField, gbc);
 
         gbc.gridy++;
+        gbc.gridx = 1;
+        gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panel.add(createDividerLine(), gbc);
 
         gbc.gridy++;
+        gbc.gridx = 0;
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.NONE;
         gbc.anchor = GridBagConstraints.EAST;
         divisionDivisorLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-        divisionDivisorLabel.setFont(divisionDivisorLabel.getFont().deriveFont(Font.BOLD, 28f));
+        divisionDivisorLabel.setFont(divisionDivisorLabel.getFont().deriveFont(Font.BOLD, 36f));
         panel.add(divisionDivisorLabel, gbc);
 
         gbc.gridx = 1;
-        gbc.anchor = GridBagConstraints.WEST;
-        divisionAnswerField.setHorizontalAlignment(SwingConstants.CENTER);
-        panel.add(divisionAnswerField, gbc);
+        gbc.anchor = GridBagConstraints.CENTER;
+        divisionDividendLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        divisionDividendLabel.setFont(divisionDividendLabel.getFont().deriveFont(Font.BOLD, 36f));
+        panel.add(divisionDividendLabel, gbc);
         return panel;
     }
 
